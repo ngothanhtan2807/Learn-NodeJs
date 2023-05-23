@@ -8,7 +8,7 @@ function App() {
     <div className='App'>
       <div className='App-header'>
 
-        <div>
+        <div className='center'>
           {/* <Button percent={12.3} >12.3%</Button>
           <Button percent={8.1}>8.1%</Button>
           <Button percent={-5.1}>5.1%</Button>
@@ -16,6 +16,8 @@ function App() {
           <Button width={77} height={32} textColor="white" bgColor="#5429FF">Following</Button>
           <Button width={77} height={32} textColor="#5429FF" bgColor="rgba(84, 41, 255, 0.1)">Follow</Button> */}
           <Card title="Revenue" amount="5.00" percent={12.3}></Card>
+          <Card title="Roi" content="+14.02" percent={-5.1}></Card>
+          <Card title="Roi" content="+14.02" percent={-5.1}></Card>
           <Card title="Roi" content="+14.02" percent={-5.1}></Card>
         </div>
       </div>

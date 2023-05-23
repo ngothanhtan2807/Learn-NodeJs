@@ -4,6 +4,8 @@ import { Button } from "component/Button";
 
 const StyleCard = styled.div`
     padding: 24px;
+    width: 150px;
+    height: 150px;
     background-color: #ffffff;
     border-radius: 20px;
     font-style: normal;
@@ -11,6 +13,7 @@ const StyleCard = styled.div`
     font-size: 14px;
     line-height: 18px;
     text-align: left;
+    
  .title, .amount-wraper{
     padding-bottom: 10px;
  } 
