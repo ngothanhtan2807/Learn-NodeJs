@@ -13,6 +13,7 @@ const StyleCard = styled.div`
     font-size: 14px;
     line-height: 18px;
     text-align: left;
+    border: 2px solid black;
     
  .title, .amount-wraper{
     padding-bottom: 10px;
