@@ -11,6 +11,9 @@ import wallet from "Assets/wallet-3.svg"
 import favoutite from 'Assets/lovely.svg'
 import history from 'Assets/clock.svg'
 import setting from 'Assets/setting.svg'
+import { TopUpCard } from "component/Card"
+
+
 const LayoutStyled = styled.div`
     width: 100vw;
     height: 100vh;
@@ -20,7 +23,7 @@ const LayoutStyled = styled.div`
 `
 const SideBar = styled.div`
     float: left;
-    width: 20%;
+    min-width: 20%;
     /* height: 100vh; */
     background-color: #ffffff;
     /* position: fixed; */
@@ -127,6 +130,9 @@ const Layout = ({ children }) => {
                         <NavItem text="Settings" path="/" icon={setting}></NavItem>
                     </div>
                     <h5 className="nav">ORTHER</h5>
+                    <div className="topup">
+                        <TopUpCard title="Your Balance" amount="1,034.02" content="Top Up Balance" ></TopUpCard>
+                    </div>
                 </div>
             </SideBar>
             <Center>
