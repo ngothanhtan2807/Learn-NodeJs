@@ -8,27 +8,30 @@ const ContentStyled = styled.div`
    margin-top: 30px;
    padding-right: 30px;
 
-   .top{
-    background-color: cadetblue;
+   .top-content{
+    /* background-color: #CAEAE6; */
     width: 100%;
     height: 354px;
     display: flex;
+    margin-bottom: 50px;
    }
    .top-left{
    float: left;
-    width: 60%;
+    width: 70%;
     height: 100%;
     position: relative;
         display: flex;
     }
-    img{
+    .background-banner{
         position: absolute;
         /* z-index: 1; */
         display: block;
-        max-width:100%;
+        /* max-width:100%;
   max-height:100%;
   width: auto;
-  height: auto;
+  height: auto; */
+  width: 716px;
+  height: 354px;
     }
     .content-left{
         width: 85%;
@@ -56,24 +59,34 @@ const ContentStyled = styled.div`
     }
     .btn-total{
         display: flex;
-        gap: 100px;
+        gap: 10px;
         width: 80%;
     }
-    .top-right1{
+    .top-right-content{
         float: right;
-        width: 40%;
-    background-color: beige;
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px
+    /* background-color: beige; */
+    /* padding-left: 30px; */
     }
 
+.bottom-right-content{
+    width: 348px;
+    height: 478px;
+    background-color: #FFFFFF;
+}
     
    
 `
 const Content = ({ children }) => {
     return (
         <ContentStyled>
-            <div className="top">
+            <div className="top-content">
                 <div className="top-left">
-                    <img src={banner} alt="" />
+                    <img className="background-banner" src={banner} alt="" />
                     <div className="content-left">
                         <div className="title">
                             <p >Discover, Create and Sell Your Own NFT.</p>
@@ -86,15 +99,24 @@ const Content = ({ children }) => {
                     </div>
 
                 </div>
-                <div className="top-right1">
+                <div className="top-right-content">
                     <Card title="Revenue" amount="5.00" percent={12.3}></Card>
                     <Card title="Spending" amount="2.00" percent={8.1}></Card>                 
                     <Card title="Roi" content="+14.02" percent={-5.1}></Card>
                     <Card title="Estimated" amount="7.00" percent={3.2}></Card>
                 </div>
             </div>
-            <div className="bottom">
+            <div className="bottom-content">
+                <div className="bottom-left-content">
+                    <div className="bottom-left-top">
+                        <h2>Trending Auctions</h2>
+                    </div>
+                </div>
+                <TopCreator>
+                    
+                </TopCreator>
 
+                
             </div>
         </ContentStyled>
     )

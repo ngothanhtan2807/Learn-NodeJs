@@ -18,7 +18,7 @@ import search from 'Assets/search (2).svg'
 
 const LayoutStyled = styled.div`
     width: 100vw;
-    height: 100vh;
+    /* height: 100%; */
     background-color: antiquewhite;
     display: flex;
     position: relative;
@@ -28,7 +28,7 @@ const SideBar = styled.div`
     float: left;
     width: 20%;
    
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
     /*  */
     position: fixed;
@@ -62,28 +62,31 @@ const SideBar = styled.div`
     .topup{
     width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    margin-left: 30px;
     }
 `
 const Center = styled.div`
     float: right;
     width: 80%;
     /* height: 100vh; */
-    background-color: #0b9787;
+    height: 100%;
+    background-color: #CAEAE6;
     margin-left: 20%;
-    
+    padding-right: 80px;
+    padding-left: 80px;
     /* position: fixed; */
-    .content{
+    /* .content-center-layout{ */
     /* width: 100%; */
-    height: 1000px;
-    background-color: brown;
-  
-}
+    /* height: 1000px; */
+    /* background-color: brown; */
+    
+/* } */
 `
 const Header = styled.div`
 width: 100%;
 height: 100px;
-background-color: blueviolet;
+/* background-color: blueviolet; */
 align-items: center;
 display: flex;
 justify-content: space-between;
@@ -118,9 +121,9 @@ width: 461px;
     margin-top: 20px;
     position: absolute;
 }
-div{
-    margin-right: 30px;
-}
+/* div{ */
+    /* padding-right:30px;
+} */
 .input::after{
 
 }
@@ -184,7 +187,7 @@ const Layout = ({ children }) => {
                         <span><img className="noti-icon" src={avt} alt="" /></span>
                     </div>
                 </Header>
-                <div className="content">
+                <div className="content-center-layout">
 
                     <Content >
                         {/* {children} */}

@@ -27,7 +27,7 @@ const StyleCard = styled.div`
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-    margin-left: 25px;
+    margin-left: 5px;
  } 
  .amount-wrapper-card{
     display: flex;
@@ -38,7 +38,7 @@ const StyleCard = styled.div`
     align-self: flex-end;
  }
  .eth-icon-card{
-margin-right: 10px;
+margin-right: 3px;
  }
  .btn-card-comp{
     /* display: flex; */
