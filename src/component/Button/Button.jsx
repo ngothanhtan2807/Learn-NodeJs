@@ -5,8 +5,8 @@ import styled from 'styled-components'
 const StyleButton = styled.button`
     width: ${props => `${props.width}px`};
     height: ${props => `${props.height}px`};
-    border: 1px solid black;
-    border-radius: 12px;
+    border: 1px solid ${props => props.borderColor};
+    border-radius: ${props =>`${props.bradius}px`};
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
@@ -17,7 +17,7 @@ const StyleButton = styled.button`
      }
 `;
 
-export const Button = ({ percent, children, width, height, textColor, bgColor, borderColor, ...res }) => {
+export const Button = ({ percent, children, width, height, textColor, bgColor, borderColor,bradius, ...res }) => {
     
 
     return <StyleButton
@@ -28,6 +28,7 @@ export const Button = ({ percent, children, width, height, textColor, bgColor, b
     textColor = {textColor}
     bgColor = {bgColor}
     borderColor = {borderColor}
+    bradius = {bradius}
     {...res} >
         
 {percent && <img src={percent < 0 ? redArrow : greenArrow} alt="" />}
@@ -40,4 +41,6 @@ Button.defaultProps = {
     width: 128,
     height: 46,
     fontSize: 16,
+    bradius: 12,
+    borderColor: 'black',
   };

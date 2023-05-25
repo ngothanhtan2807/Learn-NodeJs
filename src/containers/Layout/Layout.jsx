@@ -14,6 +14,7 @@ import setting from 'Assets/setting.svg'
 import { TopUpCard } from "component/Card"
 import lightMode from 'Assets/theme.svg'
 import { Content } from "component/Content"
+import search from 'Assets/search (2).svg'
 
 const LayoutStyled = styled.div`
     width: 100vw;
@@ -25,11 +26,12 @@ const LayoutStyled = styled.div`
 `
 const SideBar = styled.div`
     float: left;
-    min-width: 20%;
+    width: 20%;
+   
     height: 100vh;
     background-color: #ffffff;
     /*  */
-    /* position: fixed; */
+    position: fixed;
     .top{
         margin-top: 20px;
         display: flex;
@@ -68,6 +70,7 @@ const Center = styled.div`
     width: 80%;
     /* height: 100vh; */
     background-color: #0b9787;
+    margin-left: 20%;
     
     /* position: fixed; */
     .content{
@@ -96,6 +99,24 @@ font-style: normal;
 font-weight: 400;
 font-size: 21px;
 line-height: 21px;
+text-indent: 56px;
+/* margin-left: 30px;
+width: 461px;
+    height: 56px;
+    border-radius: 35px;
+    border: none;
+    text-indent: 56px;
+    font-size: 16px;
+    line-height: 21px;
+    outline: none; */
+}
+.input-wrapper{
+    position: relative;
+}
+.img{
+    margin-left: 50px;
+    margin-top: 20px;
+    position: absolute;
 }
 div{
     margin-right: 30px;
@@ -104,14 +125,17 @@ div{
 
 }
 .noti-icon{
-width: 56px;
-height: 56px;
+/* width: 56px;
+height: 56px; */
+
 border: 1px solid white;
 border-radius: 50%;
 background-color: white;
 margin-left: 20px;
     }
-
+ #noti1{
+padding: 10px;
+    }
 `
 
 
@@ -151,19 +175,20 @@ const Layout = ({ children }) => {
             </SideBar>
             <Center>
                 <Header>
-                    <div>
+                    <div className="input-wrapper">
+                        <img className="img" src={search} alt="" />
                         <input className="input" type="text" placeholder="Search item, Selection and Account" />
                     </div>
                     <div>
-                        <span ><img className="noti-icon" src={notification} alt="" /></span>
+                        <span ><img className="noti-icon" id="noti1" src={notification} alt="" /></span>
                         <span><img className="noti-icon" src={avt} alt="" /></span>
                     </div>
                 </Header>
                 <div className="content">
 
-                <Content >
-                    {/* {children} */}
-                </Content>
+                    <Content >
+                        {/* {children} */}
+                    </Content>
                 </div>
             </Center>
 
