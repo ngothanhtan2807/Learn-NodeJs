@@ -12,20 +12,23 @@ import favoutite from 'Assets/lovely.svg'
 import history from 'Assets/clock.svg'
 import setting from 'Assets/setting.svg'
 import { TopUpCard } from "component/Card"
-
+import lightMode from 'Assets/theme.svg'
+import { Content } from "component/Content"
 
 const LayoutStyled = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: antiquewhite;
     display: flex;
+    position: relative;
     /* margin-right: 32px; */
 `
 const SideBar = styled.div`
     float: left;
     min-width: 20%;
-    /* height: 100vh; */
+    height: 100vh;
     background-color: #ffffff;
+    /*  */
     /* position: fixed; */
     .top{
         margin-top: 20px;
@@ -42,17 +45,22 @@ const SideBar = styled.div`
     }
     .logo-text{
         font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-line-height: 36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
     }
     .logo-desc{
         font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 10px;
-line-height: 13px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    }
+    .topup{
+    width: auto;
+    display: flex;
+    justify-content: center;
     }
 `
 const Center = styled.div`
@@ -60,15 +68,23 @@ const Center = styled.div`
     width: 80%;
     /* height: 100vh; */
     background-color: #0b9787;
+    
+    /* position: fixed; */
+    .content{
+    /* width: 100%; */
+    height: 1000px;
+    background-color: brown;
+  
+}
 `
 const Header = styled.div`
 width: 100%;
 height: 100px;
-/* background-color: blueviolet; */
+background-color: blueviolet;
 align-items: center;
 display: flex;
 justify-content: space-between;
-padding-right: 30px;
+
 .input{
     width: 461px;
 height: 56px;
@@ -97,12 +113,7 @@ margin-left: 20px;
     }
 
 `
-const Content = styled.div`
-    width: 100%;
-    /* height: 800px; */
-    background-color: brown;
 
-`
 
 const Layout = ({ children }) => {
     return (
@@ -130,6 +141,9 @@ const Layout = ({ children }) => {
                         <NavItem text="Settings" path="/" icon={setting}></NavItem>
                     </div>
                     <h5 className="nav">ORTHER</h5>
+                    <div className="nav">
+                        <NavItem text="LightMode" path="/" icon={lightMode}></NavItem>
+                    </div>
                     <div className="topup">
                         <TopUpCard title="Your Balance" amount="1,034.02" content="Top Up Balance" ></TopUpCard>
                     </div>
@@ -145,9 +159,12 @@ const Layout = ({ children }) => {
                         <span><img className="noti-icon" src={avt} alt="" /></span>
                     </div>
                 </Header>
-                <Content>
+                <div className="content">
+
+                <Content >
                     {/* {children} */}
                 </Content>
+                </div>
             </Center>
 
         </LayoutStyled>

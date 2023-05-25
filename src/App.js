@@ -7,10 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 const StyleClass = styled.div`
 align-items: center;
   flex-wrap: wrap;
-  width: 98vw;
+  width: 100vw;
   height: 100vh;
   background-color: aqua;
-  margin-right: 40px;
+  /* margin-right: 40px; */
   `
 function App() {
   return (
