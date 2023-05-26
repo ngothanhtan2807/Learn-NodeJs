@@ -13,7 +13,7 @@ const StyleCard = styled.div`
     font-size: 14px;
     line-height: 18px;
     text-align: left;
-    border: 2px solid black;
+    border: 2px solid rgba(0,0,0,0);
     
  .title-card, .amount-wrapper-card{
     padding-bottom: 15px;
@@ -46,12 +46,13 @@ margin-right: 3px;
     justify-content: center;
  }
 `
-export const Card = ({ title, amount, content, percent }) => {
+export const Card = ({ title, amount, content, percent, bdColor }) => {
     return <StyleCard
         title={title}
         amount={amount}
         content={content}
         percent={percent}
+        bdColor = {bdColor}
     >
         <div className="title-card">{title}</div>
             {amount ?
@@ -65,7 +66,7 @@ export const Card = ({ title, amount, content, percent }) => {
                 <div className="eth-card">%</div>
             </div>
         }
-        <Button className="btn-card-comp" percent={percent} width="110" height="33">{Math.abs(percent)}%</Button>
+        <Button className="btn-card-comp" percent={percent} width="110" height="33" borderColor={bdColor}>{Math.abs(percent)}%</Button>
 
     </StyleCard>
 

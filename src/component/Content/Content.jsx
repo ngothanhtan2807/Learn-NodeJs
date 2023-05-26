@@ -178,7 +178,7 @@ const Content = ({ children }) => {
                             <p >Discover, Create and Sell Your Own NFT.</p>
                         </div>
                         <div className="btn-total">
-                            <Button className="btn-left1" width={128} height={46} textColor="#5429FF" bgColor="#FFFFFF" bradius="40">Following</Button>
+                            <Button className="btn-left1" width={128} height={46} textColor="#5429FF" bgColor="#FFFFFF" bradius="40" borderColor="rgba(0,0,0,0)">Following</Button>
                             <Button className="btn-left1" width={113} height={46} textColor="white" bgColor="rgba(0,0,0,0)" bradius="40" borderColor="#FFFFFF">Following</Button>
 
                         </div>
@@ -186,10 +186,10 @@ const Content = ({ children }) => {
 
                 </div>
                 <div className="top-right">
-                    <Card title="Revenue" amount="5.00" percent={12.3}></Card>
-                    <Card title="Spending" amount="2.00" percent={8.1}></Card>
-                    <Card title="Roi" content="+14.02" percent={-5.1}></Card>
-                    <Card title="Estimated" amount="7.00" percent={3.2}></Card>
+                    <Card title="Revenue" amount="5.00" percent={12.3} bdColor="#E9E9E9"></Card>
+                    <Card title="Spending" amount="2.00" percent={8.1} bdColor="#E9E9E9"></Card>
+                    <Card title="Roi" content="+14.02" percent={-5.1} bdColor="#E9E9E9"></Card>
+                    <Card title="Estimated" amount="7.00" percent={3.2} bdColor="#E9E9E9"></Card>
                 </div>
             </div>
             <div className="bottom-content">
@@ -206,10 +206,11 @@ const Content = ({ children }) => {
                         </div>
                     </div>
                     <div className="trendingCenter">
-                    <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
-                    <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
-                    <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
-                    <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
+                        <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
+                        <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
+                        <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
+                        <CardTrending like="21,5K Likes" nameTren="Ape In Love" idAuthor="@johnti60" amount="9.10" time="12 : 03 : 45" imgAvt={img2}></CardTrending>
+
                     </div>
                 </div>
                 <div className="bottom-right">

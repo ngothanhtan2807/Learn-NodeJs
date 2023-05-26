@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
 
-import logo from "Assets/logo.svg"
+
 import { NavItem } from "component/Nav"
 import dasboard from "Assets/category.svg"
 import market from "Assets/shop.svg"
@@ -13,13 +13,13 @@ import setting from 'Assets/setting.svg'
 import { TopUpCard } from "component/Card"
 import lightMode from 'Assets/theme.svg'
 import { Content } from "component/Content"
-
+import { Logo } from "component/Logo"
 import { Header } from "component/Header"
 
 
 const TotalContainer = styled.div`
     width: 100%;
-    height: 100%;
+    height: 150vh;
     background-color:gray;
     display: flex;
     justify-content: center;
@@ -88,13 +88,8 @@ const Layout = ({ children }) => {
             <LayoutStyled>
                 <SideBar >
                     <div className="">
-                        <div className="logo-sidebar">
-                            <span ><img className="logo" src={logo} alt="" /></span>
-                            <div >
-                                <div className="logo-text">MyNFT</div>
-                                <div className="logo-desc">NFT Marketplace</div>
-                            </div>
-                        </div>
+                        <Logo />
+                        
 
                         <div className="nav">
                             <NavItem text="Dashboard" path="/" icon={dasboard}></NavItem>

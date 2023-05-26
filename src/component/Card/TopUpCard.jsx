@@ -14,7 +14,7 @@ const StyleCard = styled.div`
     font-size: 14px;
     line-height: 18px;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid none;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
@@ -67,7 +67,7 @@ export const TopUpCard = ({ title, amount, content, percent }) => {
                 <img className="eth" src={ethIcon} alt="" />ETH
             </div>
         </div>
-        <Button className="balance" percent={percent} width="150" height="44" fontSize={14}>
+        <Button className="balance" percent={percent} width="150" height="44" fontSize={14} borderColor="rgba(0,0,0,0)">
             <div className="amout-cen1">
 
                 <img src={plus} alt="" />
