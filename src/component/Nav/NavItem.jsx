@@ -6,7 +6,7 @@ const NavStyled = styled.div`
     height: 20px;
     /* background-color: aqua; */
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     justify-content: center;
     align-items: center;
     img{

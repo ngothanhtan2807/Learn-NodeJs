@@ -39,7 +39,7 @@ export const Button = ({ percent, children, width, height, textColor, bgColor, b
 Button.defaultProps = {
     bgColor: '#FFFFFF',
     textColor: '#5429FF',
-    width: 128,
+    width: 100,
     height: 46,
     fontSize: 16,
     bradius: 12,

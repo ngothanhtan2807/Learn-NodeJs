@@ -4,8 +4,8 @@ import { Button } from "component/Button";
 
 const StyleCard = styled.div`
     padding-left: 15px;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: #ffffff;
     border-radius: 20px;
     font-style: normal;
@@ -65,7 +65,7 @@ export const Card = ({ title, amount, content, percent }) => {
                 <div className="eth-card">%</div>
             </div>
         }
-        <Button className="btn-card-comp" percent={percent} >{Math.abs(percent)}%</Button>
+        <Button className="btn-card-comp" percent={percent} width="110" height="33">{Math.abs(percent)}%</Button>
 
     </StyleCard>
 

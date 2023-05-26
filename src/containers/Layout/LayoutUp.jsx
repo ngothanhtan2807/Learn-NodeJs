@@ -26,14 +26,14 @@ const TotalContainer = styled.div`
     align-items: center;
 `
 const LayoutStyled = styled.div`
-    width: 1300px;
+    width: 1400px;
     height: 100%;
     background-color: #CAEAE6;
     display: flex;
 `
 const SideBar = styled.div`
     float: left;
-    width: 230px;
+    width: 200px;
     height: 100%;
     background-color: #ffffff;
     position: fixed;
@@ -63,13 +63,17 @@ const SideBar = styled.div`
         line-height: 13px;
         color: #7A797D;
     }
+    .topup{
+        padding-top: 30px;
+    }
 `
 const Center = styled.div`
     float: right;
-    width: 990px;
-    background-color: blue;
+    width: 1200px;
+    height: 100%;
+    background-color: #CAEAE6;
     margin-left: 250px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     padding-right:30px;
     .center-layout{
         /* padding-left: 20px; */
@@ -122,9 +126,7 @@ const Layout = ({ children }) => {
 
                         <div className="content-center-layout">
 
-                            <div className="content" >
-
-                            </div>
+                            <Content></Content>
                         </div>
                     </div>
                 </Center>

@@ -17,6 +17,7 @@ const StyleCard = styled.div`
     border: 2px solid black;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
  .title, .amount-wraper{
     padding-bottom: 10px;
  } 

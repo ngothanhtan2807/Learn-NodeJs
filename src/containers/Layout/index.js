@@ -1,2 +1,3 @@
 import { Layout } from "./LayoutUp"
-export {Layout};
+import { CardTrending } from "./CardTrending";
+export {Layout, CardTrending};
