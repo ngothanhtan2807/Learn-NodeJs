@@ -6,11 +6,11 @@ const NavStyled = styled.div`
     height: 20px;
     /* background-color: aqua; */
     font-size: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
     img{
-        padding-right: 30px;
+        padding-right: 21px;
     }
     .text{
         width: 100%;
@@ -18,9 +18,12 @@ height: 21px;
 
 font-family: 'DM Sans';
 font-style: normal;
-font-weight: 500;
-font-size: 22px;
+font-weight: 700;
+font-size: 16px;
 line-height: 21px;
+/* identical to box height */
+
+color: #7A797D;
     }
 
 `
