@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
 const NavStyled = styled.div`
@@ -7,7 +8,7 @@ const NavStyled = styled.div`
     /* background-color: aqua; */
     font-size: 25px;
     margin-bottom: 25px;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     img{
         padding-right: 21px;
@@ -28,12 +29,14 @@ color: #7A797D;
 
 `
 
-const NavItem=({text, icon})=>{
+const NavItem = ({ text, icon,path }) => {
     return (
-        <NavStyled text = {text} icon={icon}>
-            <span><img src={icon} alt="" /></span>
-            <span className="text">{text}</span>
+        <NavStyled text={text} icon={icon} path = {path}>
+            <NavLink to={path}>
+                <span><img src={icon} alt="" /></span>
+                <span className="text">{text}</span>
+            </NavLink>
         </NavStyled>
     )
 }
-export {NavItem};
+export { NavItem };
