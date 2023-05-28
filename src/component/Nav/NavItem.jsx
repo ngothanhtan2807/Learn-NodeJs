@@ -26,14 +26,29 @@ line-height: 21px;
 
 color: #7A797D;
     }
+    .link{
+        text-decoration: none;
+    }
+    .active {
+    svg {
+      path {
+        stroke: #f30ee4;
+      }  
+    }
+    .text{
+
+        color: #f30ee4;
+    }
+  }
 
 `
 
-const NavItem = ({ text, icon,path }) => {
+const NavItem = ({ text, icon,path, children }) => {
     return (
         <NavStyled text={text} icon={icon} path = {path}>
-            <NavLink to={path}>
+            <NavLink  className="link"to={path}>
                 <span><img src={icon} alt="" /></span>
+                {/* {children} */}
                 <span className="text">{text}</span>
             </NavLink>
         </NavStyled>
