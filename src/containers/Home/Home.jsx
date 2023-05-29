@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "component/Card";
 import { styled } from "styled-components";
 import { Layout } from "containers/Layout";
-
+import { Content } from "component/Content";
 
 const StyleDiv = styled.div`
 /* .center{ */
@@ -18,7 +18,7 @@ const StyleDiv = styled.div`
 `
  const Home = () => {
 return(
-<Layout></Layout> 
+<Layout><Content></Content></Layout> 
 )}
 
 

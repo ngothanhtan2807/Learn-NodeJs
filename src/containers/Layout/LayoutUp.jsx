@@ -24,6 +24,7 @@ const TotalContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `
 const LayoutStyled = styled.div`
     width: 1400px;
@@ -93,20 +94,20 @@ const Layout = ({ children }) => {
 
                         <div className="nav">
                             <NavItem text="Dashboard" path="/" icon={dasboard}></NavItem>
-                            <NavItem text="Market" path="/" icon={market}></NavItem>
-                            <NavItem text="Active Bids" path="/" icon={active}></NavItem>
+                            <NavItem text="Market" path="/1" icon={market}></NavItem>
+                            <NavItem text="Active Bids" path="/2" icon={active}></NavItem>
                         </div>
                         <h5 className="nav">PROFILE</h5>
                         <div className="nav">
-                            <NavItem text="My Portfolio" path="/" icon={portfolio}></NavItem>
-                            <NavItem text="Wallet" path="/" icon={wallet}></NavItem>
-                            <NavItem text="Favourites" path="/" icon={favoutite}></NavItem>
-                            <NavItem text="History" path="/" icon={history}></NavItem>
-                            <NavItem text="Settings" path="/" icon={setting}></NavItem>
+                            <NavItem text="My Portfolio" path="/3" icon={portfolio}></NavItem>
+                            <NavItem text="Wallet" path="/4" icon={wallet}></NavItem>
+                            <NavItem text="Favourites" path="/5" icon={favoutite}></NavItem>
+                            <NavItem text="History" path="/6" icon={history}></NavItem>
+                            <NavItem text="Settings" path="/7" icon={setting}></NavItem>
                         </div>
                         <h5 className="nav">ORTHER</h5>
                         <div className="nav">
-                            <NavItem text="LightMode" path="/" icon={lightMode}></NavItem>
+                            <NavItem text="LightMode" path="/8" icon={lightMode}></NavItem>
                         </div>
                         <div className="topup">
                             <TopUpCard title="Your Balance" amount="1,034.02" content="Top Up Balance" ></TopUpCard>
@@ -120,8 +121,8 @@ const Layout = ({ children }) => {
                         <Header className="Header-home"/>
 
                         <div className="content-center-layout">
-
-                            <Content></Content>
+        {children}
+                            {/* <Content></Content> */}
                         </div>
                     </div>
                 </Center>

@@ -15,6 +15,7 @@ import { TopUpCard } from "component/Card"
 import lightMode from 'Assets/theme.svg'
 import { Content } from "component/Content"
 import search from 'Assets/search (2).svg'
+import { ReactComponent as MarketIcon } from "Assets/shop.svg"
 
 const LayoutStyled = styled.div`
     width: 100vw;
@@ -65,6 +66,15 @@ const SideBar = styled.div`
     justify-content: start;
     margin-left: 30px;
     }
+    .nav{
+
+        .active {
+            svg {
+                path {
+                    stroke: #f30ee4;
+                }  
+            }}
+        }
 `
 const Center = styled.div`
     float: right;
@@ -139,6 +149,7 @@ margin-left: 20px;
  #noti1{
 padding: 10px;
     }
+    
 `
 
 
@@ -156,13 +167,15 @@ const Layout = ({ children }) => {
                     </div>
                     <div className="nav">
                         <NavItem text="Dashboard" path="/" icon={dasboard}></NavItem>
-                        <NavItem text="Market" path="/" icon={market}></NavItem>
-                        <NavItem text="Active Bids" path="/" icon={active}></NavItem>
+                        <NavItem text="Market" path="/1" icon={market}>
+                            <MarketIcon />
+                        </NavItem>
+                        <NavItem text="Active Bids" path="/2" icon={active}></NavItem>
                     </div>
                     <h5 className="nav">PROFILE</h5>
                     <div className="nav">
-                        <NavItem text="My Portfolio" path="/" icon={portfolio}></NavItem>
-                        <NavItem text="Wallet" path="/" icon={wallet}></NavItem>
+                        <NavItem text="My Portfolio" path="/3" icon={portfolio}></NavItem>
+                        <NavItem text="Wallet" path="/4" icon={wallet}></NavItem>
                         <NavItem text="Favourites" path="/" icon={favoutite}></NavItem>
                         <NavItem text="History" path="/" icon={history}></NavItem>
                         <NavItem text="Settings" path="/" icon={setting}></NavItem>
