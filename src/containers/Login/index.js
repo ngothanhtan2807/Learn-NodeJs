@@ -1,2 +1,3 @@
 import { Login } from "./Login";
-export { Login }
+import { LoginForm } from "./LoginForm";
+export { Login , LoginForm}

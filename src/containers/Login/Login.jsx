@@ -1,38 +1,25 @@
 import { styled } from "styled-components"
-
+import { Logo } from "component/Logo";
+import google from 'Assets/Google.svg'
+import github from 'Assets/Github.svg'
+import facebook from 'Assets/Facebook.svg'
+import rectangle from 'Assets/Rectangle 601.svg'
 const LoginStyled = styled.div`
-    *{
+ 
+    width: 100%;
+    height: 100vh;
+    background-color:gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: "Poppins";
-}
-body {
-/* display: block; */
-background: #4158D0;
-/* background-image: linear-gradient(43deg, #5c6ec7 0%, #602af5 46%, #072074 100%); */
-;
-/* position: relative; */
-overflow: hidden;
-}
-/* ::selection{
-background: rgba(26,188,156,0.3);
-} */
 .container{
-max-width: 80%;
-padding: 0 20px;
-top: 120px;
-left : 150px;
-position: relative;
-}
-.wrapper {
-width: 100%;
+width: 1400px;
 height: 800px;
-background: #fff;
-border-radius: 10px;
-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+background: linear-gradient(90deg, #FFFFFF 0%, #BBAAFF 66.67%);
 }
+
 .form{
 padding: 5% 5%;
 float: left;
@@ -112,7 +99,7 @@ position: relative;
 /* display: block; */
 }
 
-.image{
+/* .image{
 float: right;
 width: 60%;
 height: 100%;
@@ -123,26 +110,27 @@ float: right;
 height: 100%;
 width: 50%;
 background-color: #C0DBEA;
-border-radius: 10px;
+border-radius: 10px; 
 
-}
+} */
 `
 const Login = () => {
 
     return (
-        <div class="container">
-            {/* <div class="wrapper">
-                <div class="form">
-                    <h2><img src="img/logo.svg" alt="" style="width: 70px; height: 70px;"></h2>
+        <LoginStyled>
 
-                    <h2 style="font-size: 35px;padding-bottom: 20px;">Log in</h2>
+
+    
+    
+                <div class="form">
+                    <Logo/>
                     <form action="" method="post">
                         <div class="text-form">
                             <h4>User name</h4>
                             <input type="text" placeholder="username" id="username" value="kminchelle"/>
                         </div>
                         <div class="pass">
-                            <h4><span>Password</span><span class="forgot"><a href="#" style="text-decoration: none;color: gray;">Forgot Password?</a></span></h4>
+                            <h4><span>Password</span><span class="forgot"><a href="#" style={{textDecoration: "none", color: "gray"}}>Forgot Password?</a></span></h4>
                             <input type="password" placeholder="*********" id="inputPass" value="0lelplR"/>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" onclick="showHidenPass()"></span>
                         </div>
@@ -150,23 +138,26 @@ const Login = () => {
                             
                                 <button type="button" onclick="loginFunction()" id="loginbtn">Login</button>
                         </div>
-                        <div ><p style="margin: 20px;">or continue with</p></div>
+                        <div ><p style={{margin: 20+"px"}}>or continue with</p></div>
                         <div class="button-icon">
-                            <button><img src="img/Google.svg" alt=""></button>
-                            <button><img src="img/Github.svg" alt=""></button>
-                            <button><img src="img/Facebook.svg" alt=""></button>
+                            <button><img src={google} alt="" /></button>
+                            <button><img src={github} alt="" /></button>
+                            <button><img src={facebook} alt="" /></button>
                         </div>
-                        <div class="signup" style="font-size: 18px;">
+                        <div class="signup" style={{fontSize: 18+"px"}}>
                             <p>Don't have an account yet?</p>
-                            <p><a href="#" style="text-decoration: none; color: #D885A3;cursor: pointer;">Sign up for free</a></p>
+                            <p><a href="#" style={{textDecoration: "none", color: "#D885A3", cursor: "pointer"}}>Sign up for free</a></p>
                         </div>
                     </form>
                 </div>
                 <div class="image">
-                    <div class="rectangle"></div>
+                    <div class="rectangle">
+                        <img src={rectangle}/>
+                    </div>
                 </div>
-            </div> */}
-        </div>
+            
+           
+        </LoginStyled>
     )
 };
 export { Login }
